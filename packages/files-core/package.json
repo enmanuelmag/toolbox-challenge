@@ -1,0 +1,14 @@
+{
+  "name": "@toolbox/files-core",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=14 <15"
+  },
+  "scripts": {
+    "test": "mocha \"src/**/__tests__/**/*.test.js\"",
+    "lint": "standard \"src/**/*.js\""
+  }
+}
