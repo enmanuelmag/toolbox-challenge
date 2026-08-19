@@ -1,0 +1,25 @@
+{
+  "name": "toolbox-challenge",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn workspace @toolbox/api start",
+    "start:api": "yarn workspace @toolbox/api start",
+    "start:web": "yarn workspace @toolbox/web start",
+    "test": "yarn test:unit && yarn test:integration",
+    "test:unit": "yarn workspaces run test",
+    "test:integration": "mocha tests/integration/**/*.test.js",
+    "lint": "standard \"apps/**/*.js\" \"packages/**/*.js\" \"tests/**/*.js\" \"scripts/**/*.js\"",
+    "build": "yarn workspace @toolbox/web build",
+    "verify": "yarn lint && yarn check:boundaries && yarn test && yarn build",
+    "check:boundaries": "node scripts/check-boundaries.js"
+  },
+  "devDependencies": {
+    "mocha": "10.8.2",
+    "standard": "17.1.2"
+  }
+}
