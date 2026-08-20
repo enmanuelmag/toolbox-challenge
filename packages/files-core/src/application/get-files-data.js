@@ -52,7 +52,7 @@ export function buildFilesUseCases({ gateway, csvParser }) {
         });
       }
 
-      return ok(files);
+      return ok({ files });
     },
     async listFiles() {
       const listed = await gateway.listFiles();
