@@ -13,9 +13,9 @@ export function FileSelector({ fileNames, value, onChange }) {
       className="form-select"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      defaultValue="all"
+      defaultValue=""
     >
-      <option value="all">Todos los archivos</option>
+      <option value="">Todos los archivos</option>
 
       {fileNames.map((fileName) => (
         <option key={fileName} value={fileName}>
