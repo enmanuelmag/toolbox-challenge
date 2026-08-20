@@ -83,7 +83,9 @@ export function buildSecretFilesGateway({
         `/v1/secret/file/${encodeURIComponent(fileName)}`,
         'Unable to retrieve file',
       );
-      if (!result.ok) return result;
+      if (!result.ok) {
+        return result;
+      }
 
       try {
         return ok(await result.value.text());
