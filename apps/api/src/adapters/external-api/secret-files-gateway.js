@@ -7,7 +7,6 @@ const externalError = (message) => err('EXTERNAL_SERVICE', message);
 export function buildSecretFilesGateway({
   baseUrl,
   authorization,
-  timeoutMs,
   fetchImpl = fetch,
 }) {
   async function request(path, errorMessage) {
@@ -26,7 +25,6 @@ export function buildSecretFilesGateway({
       return ok(response);
     } catch {
       return externalError(errorMessage);
-    } finally {
     }
   }
 
