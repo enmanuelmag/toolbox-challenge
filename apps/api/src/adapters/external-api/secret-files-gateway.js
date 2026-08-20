@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+
 import { ok, err } from '@toolbox/files-core';
 
 const externalError = (message) => err('EXTERNAL_SERVICE', message);
@@ -10,17 +11,12 @@ export function buildSecretFilesGateway({
   fetchImpl = fetch,
 }) {
   async function request(path, errorMessage) {
-    const controller = new AbortController();
-
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
-
     try {
       const response = await fetchImpl(`${baseUrl}${path}`, {
         headers: {
           accept: 'application/json',
           authorization,
         },
-        signal: controller.signal,
       });
 
       if (!response.ok) {
@@ -31,7 +27,6 @@ export function buildSecretFilesGateway({
     } catch {
       return externalError(errorMessage);
     } finally {
-      clearTimeout(timer);
     }
   }
 
