@@ -13,7 +13,6 @@ export function FileSelector({ fileNames, value, onChange }) {
       className="form-select"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      defaultValue=""
     >
       <option value="">Todos los archivos</option>
 

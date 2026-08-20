@@ -12,7 +12,7 @@ export const fetchFileNames = createAsyncThunk(
 
       const body = await response.json();
 
-      return Array.isArray(body) ? body : [];
+      return Array.isArray(body?.files) ? body.files : [];
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -32,7 +32,8 @@ export const fetchFileData = createAsyncThunk(
       }
 
       const body = await response.json();
-      return body;
+
+      return Array.isArray(body?.files) ? body.files : [];
     } catch (error) {
       return rejectWithValue(error.message);
     }

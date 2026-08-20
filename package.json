@@ -16,7 +16,7 @@
     "test": "yarn test:unit && yarn test:integration",
     "test:unit": "yarn workspaces run test",
     "test:integration": "mocha tests/integration/**/*.test.js",
-    "lint": "standard \"apps/**/*.js\" \"packages/**/*.js\" \"tests/**/*.js\" \"scripts/**/*.js\"",
+    "lint": "standard \"apps/**/*.{js,jsx}\" \"packages/**/*.js\" \"tests/**/*.js\"",
     "build": "yarn workspace @toolbox/web build",
     "verify": "yarn lint && yarn check:boundaries && yarn test && yarn build",
     "check:boundaries": "node scripts/check-boundaries.js"

@@ -29,7 +29,7 @@ export function FilesPage() {
   if (status === 'loading') {
     content = (
       <div className="d-flex justify-content-center mt-5">
-        <Spinner animation="border" />
+        <Spinner animation="border" role="status" />
       </div>
     );
   } else if (status === 'failed') {

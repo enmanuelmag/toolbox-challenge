@@ -1,4 +1,4 @@
-import { err, ok } from '../result.js';
+import { ok } from '../result.js';
 
 import { validateRecord } from '../domain/validate-record.js';
 
@@ -22,7 +22,7 @@ export function buildFilesUseCases({ gateway, csvParser }) {
 
       if (!listed.ok) {
         console.error('Error listing files:', listed.error);
-        return err('list_files_failed', 'Failed to list files');
+        return listed;
       }
 
       const names = fileName
@@ -59,10 +59,10 @@ export function buildFilesUseCases({ gateway, csvParser }) {
 
       if (!listed.ok) {
         console.error('Error listing files:', listed.error);
-        return err('list_files_failed', 'Failed to list files');
+        return listed;
       }
 
-      return ok(listed.value);
+      return ok({ files: listed.value });
     },
   };
 }

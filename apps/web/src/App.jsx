@@ -1,6 +1,6 @@
 import { FilesPage } from './components/FilesPage';
 
-import { Container, Tex } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export function App() {
   return (
