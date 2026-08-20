@@ -9,11 +9,17 @@ module.exports = {
     clean: true,
     publicPath: '/',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: path.resolve(__dirname, 'src'),
+        resolve: {
+          fullySpecified: false,
+        },
         use: 'babel-loader',
       },
       {
@@ -22,10 +28,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ title: 'Files' })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public/index.html')
+    })
+  ],
   devServer: {
     host: '0.0.0.0',
-    port: 5000,
+    port: 4200,
     historyApiFallback: true,
     proxy: {
       '/api': {

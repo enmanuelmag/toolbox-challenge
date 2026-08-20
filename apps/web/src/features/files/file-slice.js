@@ -12,7 +12,7 @@ export const fetchFileNames = createAsyncThunk(
 
       const body = await response.json();
 
-      return Array.isArray(body.value) ? body.value : [];
+      return Array.isArray(body) ? body : [];
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -31,7 +31,8 @@ export const fetchFileData = createAsyncThunk(
         return rejectWithValue(`Request failed with status ${response.status}`);
       }
 
-      return await response.json();
+      const body = await response.json();
+      return body;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -58,7 +59,7 @@ const filesSlice = createSlice({
       .addCase(fetchFileNames.fulfilled, (state, action) => {
         state.fileNames = action.payload;
       })
-      .addCase(fetchFileData.pending, (state) => {
+      .addCase(fetchFileNames.pending, (state) => {
         state.status = 'loading';
         state.error = null;
       })
