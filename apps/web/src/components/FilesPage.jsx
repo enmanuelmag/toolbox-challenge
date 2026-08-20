@@ -45,8 +45,6 @@ export function FilesPage() {
   return (
     <Container className="py-4">
       <Stack gap={3}>
-        <h2>Files</h2>
-
         <FileSelector
           fileNames={fileNames}
           value={fileName}

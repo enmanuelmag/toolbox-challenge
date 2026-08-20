@@ -12,10 +12,10 @@ export function FilesTable({ items }) {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>File</th>
+          <th>File Name</th>
           <th>Text</th>
-          <th>Hex</th>
           <th>Number</th>
+          <th>Hex</th>
         </tr>
       </thead>
       <tbody>
@@ -24,8 +24,8 @@ export function FilesTable({ items }) {
             <tr key={`${index}-${lineIndex}`}>
               <td>{file.file}</td>
               <td>{line.text}</td>
-              <td>{line.hex}</td>
               <td>{line.number}</td>
+              <td>{line.hex}</td>
             </tr>
           )),
         )}
