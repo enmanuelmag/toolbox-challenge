@@ -1,9 +1,10 @@
 {
   "name": "@toolbox/api",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=14 <15"
+    "node": ">=14 <=16"
   },
   "scripts": {
     "start": "node src/server.js",
