@@ -26,7 +26,7 @@ yarn test
 
 ## Evidencias
 
-![Grabación](./Screen%20Recording%202026-08-19%20at%2021.23.54.mp4)
+![Grabación](./Record.mp4)
 
 ## Instrucciones de uso
 
