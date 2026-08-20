@@ -62,6 +62,3 @@ export function buildApp({ gatewayMock, csvParserMock } = {}) {
 
   return app;
 }
-
-// curl -X GET "https://example.com" \
-//      --json '{"role": "admin", "region": "US"}'

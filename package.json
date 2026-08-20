@@ -6,6 +6,10 @@
     "apps/*",
     "packages/*"
   ],
+  "resolutions": {
+    "**/browserslist": "4.23.3",
+    "**/node-releases": "2.0.19"
+  },
   "scripts": {
     "start": "yarn workspace @toolbox/api start",
     "start:api": "yarn workspace @toolbox/api start",

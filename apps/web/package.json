@@ -1,0 +1,41 @@
+{
+  "name": "@toolbox/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=16 <17"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest --runInBand",
+    "lint": "standard \"src/**/*.js\""
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.7",
+    "bootstrap": "5.3.8",
+    "react": "17.0.2",
+    "react-bootstrap": "2.10.10",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.9",
+    "redux": "4.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.8",
+    "@babel/preset-env": "7.24.8",
+    "@babel/preset-react": "7.24.7",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "12.1.5",
+    "babel-jest": "29.7.0",
+    "babel-loader": "9.2.1",
+    "css-loader": "6.11.0",
+    "html-webpack-plugin": "5.6.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "style-loader": "3.3.4",
+    "webpack": "5.109.2",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.15.2"
+  }
+}
