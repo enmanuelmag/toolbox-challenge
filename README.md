@@ -16,6 +16,18 @@ Normalmente siempre prefiero para mis proyectos usar Clean Architecture, es por 
 
 Por otro lado, aunque no se puede usar tipado, en algunos lugares use JsDoc para documentar y dar un poco de types a ciertas funciones, ya que me gusta tener doc y algo de typing a pesar de estar en Js.
 
+## Test
+
+El proyecto cuenta con test unitarios y de integracion, para ejecutarlos se puede hacer uso de:
+
+```bash
+yarn test
+```
+
+## Evidencias
+
+![Grabación](./Screen%20Recording%202026-08-19%20at%2021.23.54.mov)
+
 ## Instrucciones de uso
 
 Para levantar el proyecto, primero se debe instalar las dependencias con:
