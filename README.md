@@ -26,7 +26,8 @@ yarn test
 
 ## Evidencias
 
-![Grabación](./Record.mp4)
+https://github.com/user-attachments/assets/172c9e8b-93fb-4693-ad47-b443d7ae84cf
+
 
 ## Instrucciones de uso
 
